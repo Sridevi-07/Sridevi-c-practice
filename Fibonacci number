@@ -1,0 +1,29 @@
+Write a C program to find whether the given number is Fibonacci number.
+
+Sample Input:
+
+3
+
+Sample Output:
+
+Fibonacci number
+
+Solution:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,a,n1=1,n2=1,n3;
+    cin>>a;
+    for(int i=1;i<a;i++)
+    {
+        n3=n1+n2;
+        n1=n2;
+        n2=n3;
+    }
+    if(a==n3)
+    {cout<<"Fibonacci number";}
+    else
+    {cout<<"Not Fibonacci number";}
+}
