@@ -1,0 +1,53 @@
+Write a C program to find the sum and average of even and odd numbers from the given number list.
+
+Sample Input:
+
+1
+
+2
+
+3
+
+4
+
+-1
+
+Sample Output:
+6
+4
+3.00
+
+2.00
+
+Solution:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+   float sum1,sum2,a,b;
+   float avg2;
+   int avg1;
+   int i;
+   while(i!=-1)
+   {
+       cin>>i;
+       if(i!=0 && i%2==0)
+       {
+           sum1=sum1+i;a++;
+       }
+       else if(i%2==1)
+       {
+           sum2=sum2+i;b++;
+       }
+       else
+       {
+           break;
+       }
+   }
+   cout<<sum1<<endl<<sum2<<endl;
+   avg1=sum1/a;
+   avg2=(sum2)/b;
+   cout<<fixed<<setprecision(2)<<avg1<<endl<<fixed<<setprecision(2)<<avg2;
+}
