@@ -1,0 +1,33 @@
+Write a C program to find whether the given number is Abundant number or not.
+
+Sample Input:
+6
+
+Sample Output:
+
+Not Abundant number
+
+Solution:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,s=0;
+    cin>>n;
+    for(int i=1;i<n;i++)
+    {
+        if(s%i==0)
+        {
+            s=i+1;
+        }
+    }
+    if(s>n)
+    {
+        cout<<"Abundant number";
+    }
+    else
+    {
+        cout<<"Not Abundant number";
+    }
+}
