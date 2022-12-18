@@ -1,0 +1,24 @@
+Write a program to generate the following series - 1, 4, 27, 256….
+
+Sample Input:
+5
+
+Sample Output:
+
+1 4 27 256 3125
+
+Solution:
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int n,c;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        c=pow(i,i);
+        cout<<c<<" ";
+    }
+}
