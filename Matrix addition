@@ -1,0 +1,71 @@
+Write a C program to perform matrix addition using 2D.
+
+Input Format:
+
+Input consists of 2 integers and 2 matrix.
+First input consists of a row.
+Second input consists of a column
+Third give the elements of the first matrix.
+Fourth give the elements of the second matrix.
+
+Output Format:
+
+Output consists of 1 matrix
+output consists of a Addition of a matrix
+
+
+Sample Input:
+
+2
+
+2
+
+1 2
+
+3 4
+
+1 2
+
+3 4
+
+Sample Output:
+
+2 4 
+
+6 8 
+
+
+Solution:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int r,c,i,j;
+    cin>>r>>c;
+    int a[r][c];
+    int b[r][c];
+    int s[i][j];
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            s[i][j]=a[i][j]+b[i][j];
+            cout<<s[i][j]<<" ";
+        }cout<<endl;
+    }
+}
