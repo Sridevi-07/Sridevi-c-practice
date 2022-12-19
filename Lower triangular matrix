@@ -1,0 +1,46 @@
+write a C program to find Lower Triangular Matrix using 2D.
+
+Sample Input:
+3
+1 0 0
+4 5 0
+1 0 0
+
+Sample Output:
+Lower triangular matrix
+
+Solution:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,i,j,count;
+    cin>>n;
+    int a[n][n];
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+          cin>>a[i][j];
+        }
+    }
+    for(int i=0;i<n-1;i++)
+    {
+        for(int j=1;j<n;j++)
+        {
+            if(a[i][j]==0)
+            {
+                count=count+1;
+            }
+        }
+    }
+    if(count>=n)
+    {
+        cout<<"Lower triangular matrix";
+    }
+    else
+    {
+        cout<<"Not a Lower triangular matrix";
+    }
+}
