@@ -1,0 +1,46 @@
+Write a C program to find the sum of elements in each column
+
+INPUT & OUTPUT FORMAT: 
+
+Input consists of 2 integers and 1 2D-array. 
+Integers correspond to the size of rows and columns.
+Output consists of the addition of  elements in each columns
+
+Sample Input:
+3
+3
+3 5 1
+7 3 2
+0 54 2
+
+Sample Output:
+10
+62
+5
+
+Solution:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int r,c,s=0;
+    cin>>r>>c;
+    int a[r][c];
+    for(int i=1;i<=r;i++)
+    {
+        for(int j=1;j<=c;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    for(int i=1;i<=c;i++)
+    {
+        for(int j=1;j<=r;j++)
+        {
+           s=s+a[j][i];
+        }
+        cout<<s<<endl;
+        s=0;
+    }
+}
