@@ -1,0 +1,32 @@
+Write a C program to add two dollars and cents:
+
+Sample Input:
+30
+10
+140
+99
+
+Sample Output:
+171
+
+9
+
+
+Solution:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,x=0,e,f;
+    cin>>a>>b>>c>>d;
+    e=a+c;
+    x=b+d;
+    while(x>=100)
+    {
+        x=x-100;
+        e=e+1;
+    }
+    cout<<e<<endl<<x;
+    return 0;
+}
